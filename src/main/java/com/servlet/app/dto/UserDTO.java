@@ -6,6 +6,8 @@ public class UserDTO {
     private String email;
     private int phone;
 
+
+    //Setters
     public void setId(int id){
         this.id = id;
     }
@@ -17,5 +19,19 @@ public class UserDTO {
     }
     public void setPhone(int phone){
         this.phone = phone;
+    }
+
+    //Getters
+    public int getId(){
+        return id;
+    }
+    public String getFullName(){
+        return fullName;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public int getPhone(){
+        return phone;
     }
 }
