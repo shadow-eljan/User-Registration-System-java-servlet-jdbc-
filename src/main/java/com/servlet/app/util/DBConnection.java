@@ -13,7 +13,7 @@ public class DBConnection {
         static  String pass = dotenv.get("DB_PASS");
 
          static Connection connection = null;
-         public static Connection JDBC(){
+         public static Connection getConnection(){
              try{
                  Class.forName("com.mysql.cj.jdbc.Driver");
                  connection = DriverManager.getConnection(url, user, pass);
