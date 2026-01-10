@@ -1,6 +1,9 @@
 package com.servlet.app.web;
 
 
+import com.servlet.app.dao.UserDAO;
+import com.servlet.app.dto.UserDTO;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,7 +30,20 @@ public class UserFormServlet extends HttpServlet {
         req.setAttribute("username", name);
         req.setAttribute("email", email);
         req.setAttribute("phone", phone);
+
+
+        UserDAO dao = new UserDAO();
+        UserDTO user = new UserDTO();
+        user.setFullName(name);
+        user.setEmail(email);
+        user.setPhone(phone);
+
+        boolean inserted = dao.insert(user);
+
+
+        req.setAttribute("user", user);
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/user-form.html");
         rd.forward(req, resp);
+
     }
 }
