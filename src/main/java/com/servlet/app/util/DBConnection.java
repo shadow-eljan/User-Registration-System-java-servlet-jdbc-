@@ -7,8 +7,10 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-        static Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
-         static String url = dotenv.get("DB_URL");
+
+    static Dotenv dotenv = Dotenv.load();
+
+    static String url = dotenv.get("DB_URL");
          static String user = dotenv.get("DB_USER");
         static  String pass = dotenv.get("DB_PASS");
 
