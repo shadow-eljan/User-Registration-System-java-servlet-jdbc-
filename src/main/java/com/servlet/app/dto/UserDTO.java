@@ -4,7 +4,7 @@ public class UserDTO {
     private int id;
     private String fullName;
     private String email;
-    private int phone;
+    private String phone;
 
 
     //Setters
@@ -17,7 +17,7 @@ public class UserDTO {
     public void setEmail(String email){
         this.email = email;
     }
-    public void setPhone(int phone){
+    public void setPhone(String phone){
         this.phone = phone;
     }
 
@@ -31,7 +31,7 @@ public class UserDTO {
     public String getEmail(){
         return email;
     }
-    public int getPhone(){
+    public String getPhone(){
         return phone;
     }
 }
