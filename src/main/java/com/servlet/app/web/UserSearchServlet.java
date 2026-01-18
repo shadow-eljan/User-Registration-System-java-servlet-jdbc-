@@ -33,6 +33,7 @@ public class UserSearchServlet extends HttpServlet {
             out.println("<p>Email: " + user.getEmail() + "</p>");
         } else {
             out.println("<h2>No user found</h2>");
+            out.println("<h2>Please Try Again.</h2>");
         }
 
         out.println("<a href='search'>Go Back</a>");
