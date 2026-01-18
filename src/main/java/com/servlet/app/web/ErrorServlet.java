@@ -31,9 +31,6 @@ public class ErrorServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
 
         out.println("<h2>Registration Failed</h2>");
-        out.println("<p style='color:red;'>" +
-                (error != null ? error : "Unknown error occurred")
-                + "</p>");
         out.println("<a href='javascript:history.back()'>Go Back</a>");
     }
 }
